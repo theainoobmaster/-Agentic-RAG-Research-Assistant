@@ -1,0 +1,77 @@
+# # # --- API ---
+# fastapi
+# uvicorn
+
+# # --- Core ML ---
+# torch
+# transformers
+# peft
+
+# # --- LangChain + RAG (CONSISTENT VERSIONS) ---
+# langchain>=0.3.0,<0.4.0
+# langchain-community>=0.3.0,<0.4.0
+# langchain-huggingface>=0.1.0
+# langgraph>=0.0.40
+# faiss-cpu
+# sentence-transformers
+
+# # --- Utilities ---
+# pydantic
+# python-dotenv
+# pytest
+# requests
+# pypdf>=4.0.0
+
+beautifulsoup4
+lxml
+html5lib
+# -------------------------
+# Core API
+# -------------------------
+fastapi>=0.110.0
+uvicorn>=0.27.0
+pydantic>=2.6.0
+
+# -------------------------
+# LangGraph (agents)
+# -------------------------
+langgraph>=0.0.35
+
+# -------------------------
+# LangChain (split packages)
+# -------------------------
+langchain-core>=0.2.10
+langchain-community>=0.2.10
+langchain-huggingface>=0.0.3
+langchain-text-splitters>=0.2.1
+
+# -------------------------
+# Vector DB
+# -------------------------
+faiss-cpu>=1.8.0
+
+# -------------------------
+# Embeddings
+# -------------------------
+sentence-transformers>=2.6.0
+transformers>=4.39.0
+torch>=2.1.0
+accelerate>=0.28.0
+
+# -------------------------
+# PEFT / LoRA
+# -------------------------
+peft>=0.10.0
+safetensors>=0.4.2
+
+# -------------------------
+# PDF ingestion
+# -------------------------
+pypdf>=4.1.0
+requests>=2.31.0
+
+# -------------------------
+# Utilities
+# -------------------------
+python-dotenv>=1.0.1
+tqdm>=4.66.0

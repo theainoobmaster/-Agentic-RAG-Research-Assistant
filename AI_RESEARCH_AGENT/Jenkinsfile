@@ -1,0 +1,64 @@
+gh auth status
+pipeline {
+    agent any
+
+    environment {
+        IMAGE_NAME = "ai-research-agent"
+    }
+
+    stages {
+
+        stage("Checkout") {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage("Install Dependencies") {
+            steps {
+                sh '''
+                python --version
+                python -m pip install --upgrade pip
+                python -m pip install -r requirements.txt
+                '''
+            }
+        }
+
+        stage("Run Tests") {
+            steps {
+                sh '''
+                pytest tests/
+                '''
+            }
+        }
+
+        stage("Build Docker Image") {
+            steps {
+                sh '''
+                docker build -t $IMAGE_NAME .
+                '''
+            }
+        }
+
+        stage("Smoke Test Container") {
+            steps {
+                sh '''
+                docker run -d -p 8000:8000 --name ai_test $IMAGE_NAME
+                sleep 10
+                curl http://localhost:8000/health
+                docker stop ai_test
+                docker rm ai_test
+                '''
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ CI pipeline succeeded"
+        }
+        failure {
+            echo "❌ CI pipeline failed"
+        }
+    }
+}

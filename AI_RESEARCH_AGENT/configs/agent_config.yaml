@@ -1,0 +1,13 @@
+planner:
+  default_domain: machine_learning
+  rewrite_ambiguous_terms: true
+
+decision:
+  reasoning_modes:
+    explanation: concise
+    coding: step_by_step
+    general: general
+
+memory:
+  conversation_window: 10
+  max_feedback_items: 50

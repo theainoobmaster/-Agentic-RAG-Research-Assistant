@@ -1,0 +1,77 @@
+[
+  {
+    "task": "Summarize a research paper",
+    "input": "Retrieved Context: The paper introduces a Transformer architecture based solely on self-attention, removing recurrence and convolutions.",
+    "output": "Problem: Sequential models limit parallelization.\nProposed Model: Transformer based entirely on self-attention.\nKey Contributions: Improved parallelism and performance over recurrent models."
+  },
+  {
+    "task": "Explain the model architecture",
+    "input": "Retrieved Context: The Transformer consists of stacked encoder and decoder layers, each using multi-head self-attention and feed-forward networks.",
+    "output": "Architecture: The model uses stacked encoder-decoder blocks with multi-head self-attention followed by position-wise feed-forward layers."
+  },
+  {
+    "task": "List key contributions of the paper",
+    "input": "Retrieved Context: The authors propose scaled dot-product attention, multi-head attention, and remove recurrence entirely.",
+    "output": "Key Contributions:\n- Removal of recurrence and convolutions\n- Introduction of multi-head self-attention\n- Improved training efficiency and parallelization"
+  },
+  {
+    "task": "Answer a question using paper context",
+    "input": "Retrieved Context: The paper describes the model architecture but does not mention training cost.",
+    "output": "Not stated in the paper."
+  },
+  {
+    "task": "Summarize experimental results",
+    "input": "Retrieved Context: The model achieves higher BLEU scores on WMT English-German and English-French translation tasks.",
+    "output": "Experiments: The Transformer outperforms prior models on WMT translation benchmarks, achieving higher BLEU scores."
+  },
+  {
+    "task": "Identify datasets used",
+    "input": "Retrieved Context: The experiments are conducted on the WMT 2014 English-German and English-French datasets.",
+    "output": "Datasets: WMT 2014 English-German and English-French translation datasets."
+  },
+  {
+    "task": "Explain limitations of the paper",
+    "input": "Retrieved Context: The paper focuses on translation and parsing but does not discuss deployment limitations.",
+    "output": "Not stated in the paper."
+  },
+  {
+    "task": "Provide a structured paper summary",
+    "input": "Retrieved Context: The Transformer uses self-attention to model long-range dependencies and improves training speed.",
+    "output": "Problem: Inefficient sequential modeling.\nSolution: Self-attention-based Transformer.\nImpact: Faster training and improved performance."
+  },
+  {
+    "task": "Answer strictly using retrieved context",
+    "input": "Retrieved Context: The paper introduces positional encoding to represent token order.",
+    "output": "The model uses positional encodings to inject information about token order into the self-attention mechanism."
+  },
+  {
+    "task": "Answer a question not supported by the paper",
+    "input": "Retrieved Context: The paper does not mention reinforcement learning.",
+    "output": "Not stated in the paper."
+  },
+  {
+    "task": "Summarize the motivation of the paper",
+    "input": "Retrieved Context: Recurrent models prevent parallel computation due to their sequential nature.",
+    "output": "Motivation: To overcome the parallelization limitations of recurrent sequence models."
+  },
+  {
+    "task": "Describe the attention mechanism",
+    "input": "Retrieved Context: The paper proposes scaled dot-product attention as the core computation.",
+    "output": "The attention mechanism computes weighted representations using scaled dot-product attention."
+  },
+  {
+    "task": "Explain the role of self-attention",
+    "input": "Retrieved Context: Self-attention allows each token to attend to all other tokens in the sequence.",
+    "output": "Self-attention enables the model to capture global dependencies by allowing tokens to attend to each other directly."
+  },
+  {
+    "task": "Answer with refusal if information is missing",
+    "input": "Retrieved Context: The paper does not discuss carbon footprint or environmental impact.",
+    "output": "Not stated in the paper."
+  },
+  {
+    "task": "Summarize paper contributions concisely",
+    "input": "Retrieved Context: The Transformer removes recurrence, uses self-attention, and improves translation quality.",
+    "output": "The paper introduces a self-attention-based Transformer architecture that removes recurrence and improves translation performance."
+  }
+]

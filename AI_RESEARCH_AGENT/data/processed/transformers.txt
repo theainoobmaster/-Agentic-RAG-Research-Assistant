@@ -1,0 +1,3 @@
+Transformer neural networks are deep learning models based on self-attention.
+They were introduced in the paper "Attention Is All You Need".
+Transformers process sequences in parallel and are widely used in NLP.
